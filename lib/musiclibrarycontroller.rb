@@ -73,7 +73,7 @@ def list_songs_by_genre
     if genre = Genre.find_by_name(input_genre)
       genre.song.sort do |song1, song2|
       song1.name <=> song2.name
-    end.each.with_index(1) {|song, v| puts "#{v}. #{song.artist.name} #{song.name}"}
+    end.each.with_index(1) {|song, v| puts "#{v}. #{song.artist.name} - #{song.name}"}
   end
 end
 
